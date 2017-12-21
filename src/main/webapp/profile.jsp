@@ -8,6 +8,13 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
+    <%
+        If(session.getAttribute("username")== null)
+        {
+          response.sendRedirect("login.jsp");
+        }
+    %>
+
     <div class="container">
         <h1>Viewing your profile.</h1>
     </div>
